@@ -1,0 +1,67 @@
+@import "variables";
+@import "functions";
+
+@mixin myFlex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bordes($grosor){
+    border: solid $grosor $lilaFuerte;
+}
+
+@mixin radius($var:3){
+    border-radius: tpx($var);
+    -webkit-border-radius: tpx($var);
+    -moz-border-radius: tpx($var);
+    -ms-border-radius: tpx($var);
+    -o-border-radius: tpx($var);
+}
+
+@mixin radiusTitle(){
+    border-radius: tpx(2);
+    -webkit-border-radius: tpx(2);
+    -moz-border-radius: tpx(2);
+    -ms-border-radius: tpx(2);
+    -o-border-radius: tpx(2);
+}
+
+@mixin encabezados(){
+    margin-bottom: tpx(12);
+    background-color: $orange;
+    padding: tpx(18);
+    h2{
+        font-size: tpx(30);
+        text-align: center;
+        font-weight: 800;
+        color: $blanco;
+        text-transform: uppercase;
+        }
+}
+@mixin encabezadosMobil(){
+    margin-bottom: tpx(12);
+    background-color: $orange;
+    padding: tpx(2) tpx(10);
+    width: max-content;
+
+        h2{
+            text-align: center;
+            color: $blanco;
+        }
+}
+
+@mixin animacionFocus(){
+    transform-origin: left;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+
+@mixin enlaces{
+    color: $grisTono1;
+    font-weight: 300;
+    border-bottom: solid 2px #e01d0b;
+}
