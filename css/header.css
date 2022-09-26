@@ -1,0 +1,242 @@
+/* Pasar de pixeles a rem */
+/* BLANCO */
+/* CONTAINER */
+/* GRIS */
+/* Enlaces */
+/* <hr> */
+/* Text area */
+/* Mis colores por defecto */
+/* NARANJA */
+/* Color para el hover de los botones de la seccion 'dc vs marvel' */
+/* Color para el estado 'active'de los enlace del encabezado */
+/* COLORMIND 1*/
+/* COLORMIND 2*/
+/* COLORMIND 3*/
+/* Pasar de pixeles a rem */
+/* BLANCO */
+/* CONTAINER */
+/* GRIS */
+/* Enlaces */
+/* <hr> */
+/* Text area */
+/* Mis colores por defecto */
+/* NARANJA */
+/* Color para el hover de los botones de la seccion 'dc vs marvel' */
+/* Color para el estado 'active'de los enlace del encabezado */
+/* COLORMIND 1*/
+/* COLORMIND 2*/
+/* COLORMIND 3*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+@media screen and (min-width: 1100px) {
+  #up {
+    background-color: red;
+    left: 0px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* Contenedor del notificaciones */
+  .header_notificacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 210, 17);
+    min-height: 0.3125rem;
+    max-height: auto;
+  }
+  .header_aviso {
+    margin: 0.5rem 0.5rem 0.5rem;
+    width: calc(100% - 8.125rem);
+    font-size: 0.75rem;
+  }
+  /* Header "redes sociales */
+  .header_rs {
+    width: 6.25rem;
+  }
+  .header_rs > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header_rs > ul > li {
+    transform: scale(0.8);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+  /* Le damos animacion al conteneodr de los iconos */
+  .header_rs > ul > li:hover {
+    animation: liicon 0.2s 1 ease-in-out forwards;
+    -webkit-animation: liicon 0.2s 1 ease-in-out forwards;
+  }
+  /* Iconos del header */
+  .header_rs > ul i {
+    font-size: 1.375rem;
+  }
+  /* Animamos a los iconos una vez se haya hecho hover a los 'li'  */
+  .header_rs > ul > li:hover i {
+    animation: icon 0.2s 1 ease-in-out forwards;
+    -webkit-animation: icon 0.2s 1 ease-in-out forwards;
+  }
+  @-webkit-keyframes liicon {
+    0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    100% {
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+      -o-transform: scale(1.02);
+    }
+    /* Haciendo esto conseguimos que la imagen no se vuelva borrosa al momento que ocurre la animacion */
+  }
+  @keyframes liicon {
+    0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    100% {
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+      -o-transform: scale(1.02);
+    }
+    /* Haciendo esto conseguimos que la imagen no se vuelva borrosa al momento que ocurre la animacion */
+  }
+  @-webkit-keyframes icon {
+    0% {
+      font-size: 1.375rem;
+    }
+    100% {
+      font-size: 1.375rem;
+    }
+  }
+  @keyframes icon {
+    0% {
+      font-size: 1.375rem;
+    }
+    100% {
+      font-size: 1.375rem;
+    }
+  }
+  /* Fin de header notificacion */
+  /* Contenedor de navegacion */
+  .header_cnvg {
+    padding: 0 2.25rem;
+    justify-content: center;
+    background-color: rgb(9, 9, 9);
+    border-bottom: solid 0.125rem gray;
+  }
+  .header_cnvg > div:first-child {
+    /*  */
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 6.25rem;
+    background-color: rgb(246, 209, 0);
+    overflow: hidden;
+  }
+  .header_cnvg > div:first-child a {
+    position: absolute;
+    background-color: rgb(59, 62, 61);
+    width: 12.5rem;
+    height: 6.875rem;
+    /* debo centrarlo bien con calc() */
+    left: 39.5%;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+  }
+  .header_navegacion {
+    display: flex;
+    height: 3.125rem;
+    padding-bottom: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header_listas {
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .header_listas > li {
+    height: 1.1875rem;
+    padding: 0.5625rem;
+    margin-left: 0.625rem;
+  }
+  .header_listas a {
+    color: rgb(235, 235, 235);
+  }
+  /* Input busqueda */
+  .header_cbusqueda [type=search] {
+    width: 20.625rem;
+    height: 2.375rem;
+    padding: 0 0.75rem 0 0.75rem;
+    border: none;
+    background-color: rgb(218, 215, 214);
+    outline: solid 0.125rem rgb(170, 107, 6);
+    color: rgb(32, 33, 33);
+    border-radius: 1.1875rem;
+    -webkit-border-radius: 1.1875rem;
+    -moz-border-radius: 1.1875rem;
+    -ms-border-radius: 1.1875rem;
+    -o-border-radius: 1.1875rem;
+  }
+  /* Menu hamburguesa */
+  .header_menuHmb {
+    display: none;
+    align-self: center;
+  }
+  /* Inicio de sesion y registro de usurio */
+  .header_lgsg {
+    margin-left: 2rem;
+    width: 10.625rem;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+  }
+  .header_lgsg .header_logins {
+    border-radius: 0.125rem;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    -ms-border-radius: 0.125rem;
+    -o-border-radius: 0.125rem;
+    margin-right: 0.625rem;
+    padding: 0.625rem;
+    color: rgb(35, 85, 129);
+    background-color: rgb(238, 234, 232);
+  }
+  /* Fin de contenedor de navegacion */
+}/*# sourceMappingURL=header.css.map */

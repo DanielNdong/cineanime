@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cineanime</title>
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body id="body">
+    <!-- Header -->
+    <header class="header" id="up">
+        <!-- Contenedor del logo -->
+        <div class="header_logo">
+          <a href="index.html">
+            <!-- Logo -->
+            <img src="" alt="logo" />
+          </a>
+        </div>
+      <!-- Barra de notificaciones -->
+      <article class="header_notificacion">
+        <!-- Texto de aviso... -->
+        <div class="header_aviso">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            officiis reiciendis aliquid debitis accusamus, alias quis vitae
+            optio neque distinctio unde id porro. 
+          </p>
+        </div>
+        <!-- Enlaces a redes sociales -->
+        <div class="header_rs">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <input type="checkbox" name="" id="hamburguesa">   
+      <!-- Contenedor de navegacion -->
+      <section class="header_cnvg" id="naviWrapper">
+        <!-- Menu navegación -->
+        <nav class="header_navegacion" >
+            <!-- Contenedor del form de 'busqueda' -->
+            <div class="header_cbusqueda">
+              <form>
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="search"
+                />
+              </form>
+            </div>
+          <ul class="header_listas">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="estrenos/estrenos">ESTRENOS</a></li>
+            <li><a href="noticias/noticias.html">NOTICIAS</a></li>
+            <li><a href="rating/rating.html">RATING</a></li>
+            <li><a href="series/series.html">FOROS</a></li>
+            <li><a href="contactos.html">CONTÁCTO</a></li>
+            
+          </ul>
+          <!-- Inicio de sesón y Registro de usuario -->
+          <section class="header_lgsg">
+            <div>
+              <ul>
+                <li><p><a>Login</a></p></li>
+                <li><a>Sign in</a></li>
+              </ul>
+            </div>
+            <div>
+              <a class="logins" href="validation/login.html">Iniciar sesión</a>
+              <span>Todavía no tienes cuenta</span>
+              <a class="logins" href="validation/signout.html"
+                >Registrate!</a>
+            </div>
+          </section>
+          <!-- Logo y enlaces a redes sociales -->
+        <section class="header_media_wrapper"> 
+          <!-- Contenedor de redes sociales -->
+              <h3>Follow us</h3>
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-telegram" ></i>
+                  </a>
+                </li>
+              </ul>
+      </section>
+        </nav>
+      </section>
+      <!-- Menu hamburguesa -->
+      
+      <div class="header_menuHmb">
+        <button class="hamburger hamburger--collapse-r ham-active" type="button" id="hamActive">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <label class="hamburger_label" for="hamburguesa"></label>
+        </button>
+      </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Main -->
+    <main>
+    <!-- Boton flotante -->
+    <a href="#up">
+      <img src="assets/icons/arrow-down-angle-svgrepo-com.svg" class="stikybutton" alt="subir"></img>
+    </a>
+
+    <!-- Caroussel del encabezado -->
+    <section class="caroussel crs">
+      <div class="caroussel_wrapper">
+          <div class="caroussel_wrapper_item"><img src="assets/images/peliculas/topgun.jpg"> </div>
+          <div class="caroussel_wrapper_item"><img src="assets/images/peliculas/prey.jpg"> </div>
+          <div class="caroussel_wrapper_item"><img src="assets/images/peliculas/thebatman.jpg"> </div>
+          <div class="caroussel_wrapper_item"><img src="assets/images/animes/jujutsukaisen0.jpg"> </div>
+        </div>
+      </section>
+      
+      <div class="container">
+      <!-- Ultimas noticias -->
+      <section class="recientes">
+        <article class="recientes_noticias">
+          <header class="recientes_titulo">
+            <h2>Ultimas noticias</h2>
+          </header>
+          <figure class="recientes_img">
+            <img src="assets/images/series/starwarsandor.jpg" title="Star wars:Andor" alt="Star wars: Andor"/>
+            <figcaption>
+              <h3>ANDOR: Avance del capitulo 7</h3>
+              <p>Breve descripcion del titular señalando aspecto importantes</p>
+            </figcaption> 
+          </figure>
+        </article>
+
+        <!-- Barra lateral -->
+        <p class="otn" style="margin-top: 20px; color: gray;">Otras noticias</p>
+        <aside class="recientes_aside">
+          <div class="recientes_aside_wrapper">
+             
+            <figure class="aside_wrapper_items">
+                <h2>NETFLIX</h2>
+                <img src="assets/images/series/strangersthings.webp" title="Stranger Things" alt="img" />
+                <figcaption>
+                  <h3>Stranger Things</h3>
+                </figcaption>
+            </figure>
+             
+              <figure class="aside_wrapper_items">
+                <h2>ANIME</h2>
+                <img src="assets/images/animes/Cyberpunk-4K-Wallpapers.jpg" title="Ciberpunk" alt="img" />
+                <figcaption>
+                  <h3>Ciberpunk: Redrunner</h3>
+                </figcaption>
+            </figure>
+             
+              <figure class="aside_wrapper_items">
+                <h2>DISNEY</h2>
+                <img src="assets/images/peliculas/zombie3.webp" title="Zombie 3" alt="img" />
+                <figcaption>
+                  <h3>Zombie 3</h3>
+                </figcaption>
+            </figure>
+             
+              <figure class="aside_wrapper_items">
+                <h2>WARNER</h2>
+                <img src="assets/images/peliculas/supermascotas.webp" title="Supermascotas" alt="img" />
+                <figcaption>
+                  <h3>Supermascotas</h3>
+                </figcaption>
+            </figure>
+             
+              <figure class="aside_wrapper_items">
+                <h2>MARVEL</h2>
+                <img src="assets/images/peliculas/loveandthunder.webp" title="Thor: Love and thunder" alt="img" />
+                <figcaption>
+                  <h3>Thor Love and Thunder</h3>
+                </figcaption>
+            </figure>
+             
+              <figure class="aside_wrapper_items">
+                <h2>DC</h2>
+                <img src="assets/images/peliculas/suicidesquad2.jpg" title="The Suicide Squad 2" alt="img" />
+                <figcaption>
+                  <h3>The Suicide Squad</h3>
+                </figcaption>
+            </figure>
+          </div>
+        </aside>
+      </section>
+      <!-- Rodajes -->
+      <hr>
+      <section class="rodajes">
+        <article class="rodajes_art">
+          <header class="rodajes_titulo">
+            <h2>Rodajes</h2>
+          </header>
+          <figure class="rodajes_info first">
+            <img src="assets/images/peliculas/rodajejurasicworlddominion.jpg" title="Jurasic World Dominion"img" />
+            <figcaption>
+              <h3>Jurasic World Dominion: Imagen se hace viral</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                necessitati</p>
+            </figcaption>
+          </figure>
+          <figure class="rodajes_info">
+            <img src="assets/images/peliculas/rodajefalconwinersd.jpg" title="Falcon and Winter Soldier" alt="img" />
+            <figcaption>
+              <h3>Falcon & Winter Soldier: Escenas del rodaje</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                necessitati</p>
+            </figcaption>
+          </figure>
+          <figure class="rodajes_info">
+            <img src="assets/images/peliculas/rodajeanimalesfantasticos.webp" title="Animales Fantasticos y donde encontrarlos" alt="img" />
+            <figcaption>
+              <h3>Animales Fantasticos: Emotiva escena impacta a los fans</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                necessitati</p>
+            </figcaption>
+          </figure>
+          <figure class="rodajes_info">
+            <img src="assets/images/peliculas/rodajeacuman2.jpg" title="Acuaman 2" alt="img" />
+            <figcaption>
+              <h3>Acuaman 2: Imagenes de Jason Momoa en el set</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                necessitati</p>
+            </figcaption>
+          </figure>
+          <div>
+            <a href="pages/rodajes/"> Ver más </a>
+          </div>
+        </article>
+        <!-- Aside de rodajes -->
+        <aside class="rodajes_aside">
+          <article>
+            <figure class="rodajes_item first">
+              <img src="assets/images/peliculas/0OdzpVm9lEsGO0UG.webp" alt="img" />
+              <figcaption>
+                <h3>Titular</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                  necessitati
+                </p>
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure class="rodajes_item">
+              <img src="assets/images/peliculas/rodajeacuman2.jpg" alt="img" />
+              <figcaption>
+                <h3>Titular</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                  necessitati
+                </p>
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure class="rodajes_item">
+              <img src="assets/images/peliculas/rodajeanimalesfantasticos.webp" alt="img" />
+              <figcaption>
+                <h3>Titular</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                  necessitati
+                </p>
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure class="rodajes_item">
+              <img src="assets/images/peliculas/rodajefalconwinrsd.jpg" alt="img" />
+              <figcaption>
+                <h3>Titular</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Laudantium excepturi nulla cum perspiciatis. Distinctio quos
+                  necessitati
+                </p>
+              </figcaption>
+            </figure>
+          </article>
+          <div>
+            <a href=""> Ver más </a>
+          </div>
+        </aside>
+      </section>
+      <!-- Best trailer -->
+      <hr>
+      <section class="trailers">
+        <header class="trailers_titulo">
+          <h2>Best trailers</h2>
+        </header>
+        <div class="trailers_labelsWrapper">
+          <button class="labelButton">
+            <label for="pelis">PELICULAS</label>
+          </button>
+          <button class="labelButton">
+            <label for="series">SERIES</label>
+          </button>
+          <button class="labelButton">
+            <label for="animes">ANIMES</label>
+          </button>
+        </div>
+        <div class="trailers_galeria">
+          <div class="galeria_inner" id="A">
+              <input type="radio" name="as" id="pelis" >
+              <article class="trailers_genero">
+                <figure>
+                  <img src="assets/images/peliculas/blackadam.webp" title="Black Adam" alt="img" />
+                  <figcaption>
+                    <h3>Black Adam</h3>
+                    <p>Breve sinopsis de la pelicula</p>
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/images/peliculas/traileravatar2.webp" alt="img" />
+                  <figcaption>
+                    <h3>Avatar: El camino del agua</h3>
+                    <p>Breve sinopsis de la pelicula</p>
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/images/peliculas/trailersshazam.jpg" alt="img" />
+                  <figcaption>
+                    <h3>Shazam 2</h3>
+                    <p>Breve sinopsis de la pelicula</p>
+                  </figcaption>
+                </figure>
+              </article>
+          </div>
+          <div class="galeria_inner" id="B" checked>
+            <input type="radio" name="as" id="series">
+            <article class="trailers_genero">
+              <figure>
+                <img src="assets/images/series/trailertheboys.jpg" alt="img" />
+                <figcaption>
+                  <h3>Series</h3>
+                  <p>lorem descripcion</p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/series/trailerlacasadedragones.jpg" alt="img" />
+                <figcaption>
+                  <h3>Series</h3>
+                  <p>lorem descripcion</p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/series/traileranillosdepoder.png" alt="img" />
+                <figcaption>
+                  <h3>Series</h3>
+                  <p>lorem descripcion</p>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+          <div class="galeria_inner" id="C">
+            <input type="radio" name="as" id="animes">
+            <article class="trailers_genero">
+              <figure>
+                <img src="assets/images/animes/trailers/tokyorevengers.jpg" alt="img" />
+                <figcaption>
+                  <h3>Animes</h3>
+                  <p>lorem descripcion</p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/animes/trailers/jujutsukaisen0.webp" alt="img" />
+                <figcaption>
+                  <h3>Animes</h3>
+                  <p>lorem descripcion</p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="assets/images/animes/trailers/hxh.webp" alt="img" />
+                <figcaption>
+                  <h3>Animes</h3>
+                  <p>lorem descripcion</p>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <!-- DC VS MARVEL -->
+      <section class="dcmar">
+        <header class="dcmar_titulo">
+          <h2>DC VS MARVEL</h2>
+        </header>
+        <p>Vota por tu pelicula de la temporada favorita</p>
+        <div class="dcmar_rw">
+          <header>
+            <h3>2022</h3>
+            <hr>
+          </header>
+          <section class="dcmar_container">
+            <!-- Primer grupo -->
+            <div>
+                  <!-- Imagenes wrapper -->
+              <div class="dcmar_imgcon" role="button">
+                <figure data-valor="30%">
+                  <img src="assets/images/peliculas/thorlovethunder.jpg" alt="img" />
+                </figure>
+                <div>
+                  <img src="assets/images/versus1.png" alt="">
+                </div>
+                <figure data-valor="70%">
+                  <img src="assets/images/peliculas/thebatman.jpg" alt="img" />
+                </figure>
+              </div>
+              <!-- Comentarios -->
+              <div class="dcmar_comentarios">
+                <div class="dcmar_boton">
+                 <form action="">
+                  <label for="coment" >Comentar</label>
+                  <input  type="checkbox" id="coment" style="position: absolute;">
+               
+                <div class="inp">
+                  <textarea placeholder="Pon algun comentario"></textarea>
+                  <input type="submit" value="Enviar">
+                </div>
+              </div>
+            </form>
+              <div class="dcmar_cantidad" data-comentarios="21">
+                <p>Comentarios</p>
+              </div>
+              </div>
+            </div>
+            <!-- Segundo grupo -->
+            <div>
+                  <!-- Imagenes wrapper -->
+              <div class="dcmar_imgcon">
+                <figure data-valor="65%">
+                  <img src="https://tbmdcnd.xyz/p/v2/w1/4GjBCZpAJruzv39EWiKa9y4O8v5aLY7Guh8W6onGFI51.webp" alt="img" />
+                </figure>
+                <div>
+                  <img src="assets/images/versus1.png" alt="versus"> 
+                </div>
+                <figure data-valor="35%">
+                  <img src="//tbmdcnd.xyz/p/v2/w1/Xx33qCrlO3NScKTDo2zBxH9sDCb1RAQEXJyecQpQ.webp" alt="img" />
+                </figure>
+              </div>
+              <!-- Comentarios -->
+              <div class="dcmar_comentarios">
+                <div class="dcmar_boton">
+                  <label for="coment2">Comentar</label>
+                    <input  type="checkbox" id="coment2">
+                 
+                  <div class="inp">
+                    <textarea name="" placeholder="Pon algun comentario"></textarea>
+                    <input type="submit" value="Enviar" >
+                  </div>
+                </div>
+                <div class="dcmar_cantidad" data-comentarios="21">
+                  <p>Comentarios</p>
+                </div>
+              </div>            
+            </div>
+          </section>
+        </div>
+        <div class="dcmar_rw">
+          <header>
+            <h3>2021</h3>
+            <hr>
+          </header>
+          <section class="dcmar_container">
+            <div>
+              <div class="dcmar_imgcon">
+                <figure data-valor="40%">
+                  <img src="//tbmdcnd.xyz/p/v2/w1/mMm0Xe0g3WejvHOhA3vvrf2w2NYtJneVZqLMvC.webp" alt="img" />
+                </figure>
+                <div>
+                  <img src="assets/images/versus1.png" alt="versus">
+                </div>
+                <figure data-valor="60%">
+                  <img src="//tbmdcnd.xyz/p/v2/w1/Lw2oT4hHfxlmtz9aFJLyeLNmp44tD.webp" alt="img" />
+                </figure>
+              </div>
+              <div class="dcmar_comentarios">
+                <div class="dcmar_boton">
+                  <label for="coment3">Comentar</label>
+                    <input  type="checkbox" id="coment3">
+                 
+                  <div class="inp">
+                    <textarea name="" placeholder="Pon algun comentario"></textarea>
+                    <input type="submit" value="Enviar">
+                  </div>
+                </div>
+                <div class="dcmar_cantidad" data-comentarios="21">
+                  <p>Comentarios</p>
+                </div>
+              </div>            </div>
+            <div>
+              <div class="dcmar_imgcon">
+                <figure data-valor="45%">
+                  <img src="//tbmdcnd.xyz/p/v2/w1/ChTmluS0rINAzNuMMhj2GbXhFp2FnLyQTh24CLUUjx.webp" alt="img" />
+                </figure>
+                <div>
+                  <img src="assets/images/versus1.png" alt="versus">
+                </div>
+                <figure data-valor="55%">
+                  <img src="//tbmdcnd.xyz/p/v2/w1/rzcdrWlex8vDRU968Upi.webp" alt="img" />
+                </figure>
+              </div>
+              <div class="dcmar_comentarios">
+                <div class="dcmar_boton">
+                  <label for="coment4">Comentar</label>
+                    <input  type="checkbox" id="coment4">
+                 
+                  <div class="inp">
+                    <textarea name="" placeholder="Pon algun comentario"></textarea>
+                    <input type="submit" value="Enviar">
+                  </div>
+                </div>
+                <div class="dcmar_cantidad" data-comentarios="21">
+                  <p>Comentarios</p>
+                </div>
+              </div>            
+            </div>
+          </section>
+        </div>
+        <!-- Mas comparaciones -->
+        <div>
+          <a href="">Más comparaciones</a>
+        </div>
+      </section>
+      <hr>
+      <!-- Ranking TOP 10 -->
+      <section class="valoradas">
+        <header class="valoradas_titulo">
+          <h2>TOP 10 RANKING</h2>
+        </header>
+        <section class="valoradas_container">
+          <article class="valoradas_categoria">
+            <h3>Peliculas</h3>
+            <div class="valoradas_lista">
+              <ul>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/6Qgs56uBI21ViYKdh1TemUjr5YDDBmwy2DQYzbp83g.webp" alt="peli">
+                      <figcaption>
+                        <h3>Titulo de la pelicula</h3>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/6pgoe_5Ua5InBd.jpg" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/7AxmvGm3NB4nEQHgiEdyocTl2hGfHEdE5BRq74kKvfX0V.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/7sSnw9Rp0Yb3dzyXlTxb.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/alBawE90fd4yWigV9i8LU8o9Tq7eTQbT2DUp7UfdXaCK.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/aLThXfu9Nw2Cs8oHnz7PekKG.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/BqDyVHSyPd5R7vIYxBOaslWeCJSDi.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/peliculas/BXvVFj8o6Gv2tQNoVL9qWl7QCAr2uRy.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="valoradas_categoria">
+            <h3>Series</h3>
+            <div class="valoradas_lista">
+              <ul>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/MHY6Zl4oAFtf6cixKBR.webp" alt="peli">
+                      <figcaption>
+                        <h3>Titulo de la pelicula</h3>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/MzU8knFasCZfoKr8m3Gykh.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/QOXnDC2JyTPSF16D6fMzm1jBpcDcuU1azOo2ggCF.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                    <img src="assets/images/series/od6VOzjrdW3TYJkRRfCLEE7N3cVDBQrQUoCyNLQR.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/tYs6qCN9yaiUcvj4try.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/Ux7BmSGYv2xBTlC.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/w1el9pMpXCO39xyO6Ef0LFDIu0ceL5O7W.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/series/XpaUDY8z6DiBVEy998Fh0YmIsjFUsXPgcP1GDZ6Ase2.webp" alt="peli">
+                      <figcaption>
+                        <h4>Titulo de la pelicula</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="valoradas_categoria">
+            <h3>Animes</h3>
+            <div class="valoradas_lista">
+              <ul>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3667.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3670.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3675.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3676.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3678" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3682.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3686.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                  <a href="">
+                    <figure>
+                      <img src="assets/images/animes/3692.jpg" alt="anime">
+                      <figcaption>
+                        <h4>Titulo del anime</h4>
+                        <p>La descripcion de las peliculas van aqui!</p>
+                        <span>
+                          <img src="/" alt="icon">
+                        </span>
+                      </figcaption>
+                    </figure>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+     </section>
+
+      <!-- Plataformas -->
+      <section class="plataformas">
+        <header class="plataformas_titulo">
+          <h2>PLATAFORMAS DIGITALES</h2>
+        </header>
+        <!-- Netflix -->
+        <article class="plataformas_wrapper">
+          <h2>NETLIX</h2>
+           <div>
+            <div class="plataformas_wrapper_inner">
+              
+              <figure class="plataformas_items">
+                  <img src="assets/images/peliculas/65hcKXCYi7zU481GGyA5.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/peliculas/0OdzpVm9lEsGO0UG.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/peliculas/202111101637211_2.jpg.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/peliculas/3868936-black-adam-poster-teaser.jpeg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/peliculas/50sUin6pSk9jDnPybhLO1E6T4.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/peliculas/5LrgtGGX1AjQn29uPVbjLKtFXCeUB.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+            </div>
+           </div>
+        </article>
+        <!-- DISNEY PLUS -->
+        <article class="plataformas_wrapper">
+          <h2>DISNEY PLUS</h2>
+           <div>
+            <div class="plataformas_wrapper_inner">
+              
+              <figure class="plataformas_items">
+                  <img src="assets/images/series/CA8vsVeZIhZBMvFS4pbwgMtsW4ivWTcpjaLC.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/series/brGHGgIjTcmfbwcuhSY45.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/series/8G7lG0vVNggK4rreseVsV.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/series/7xQGd5AZHlqwDUMF8J2MhGtrce7bjK6h7MObHf1fqhB.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/series/6yrrliYNfRVBSZXEg2fK0.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/series/comegFBkVZTjVzD.webp" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+            </div>
+           </div>
+        </article>
+        <!-- HBO -->
+        <article class="plataformas_wrapper">
+          <h2>HBO</h2>
+           <div>
+            <div class="plataformas_wrapper_inner">
+              
+              <figure class="plataformas_items">
+                  <img src="assets/images/animes/3651.jpg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/animes/3644.jpg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/animes/3636.jpg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/animes/3635.jpg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/animes/3646.jpg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+              
+                <figure class="plataformas_items">
+                  <img src="assets/images/animes/3649.jpg" alt="img" />
+                  <figcaption>
+                    <h3>The Big Bang Theory</h3>
+                  </figcaption>
+              </figure>
+            </div>
+           </div>
+        </article>
+      </section>
+      </div>
+
+    </main>
+    <!-- End main -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- footer main content -->
+      <section class="footer_container">
+        <!-- Contenedor del logo del sitio web -->
+        <div class="logo">
+          <a href="/index.html">
+            <img src="/assets/" alt="cineanime">
+          </a>
+        </div>
+        <!-- Logo y enlaces a redes sociales -->
+        <section class="media_wrapper media"> 
+            <!-- Contenedor de redes sociales -->
+                <h3>Follow us</h3>
+                <ul>
+                  <li>
+                    <a href="">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fa-brands fa-telegram" ></i>
+                    </a>
+                  </li>
+                </ul>
+        </section>
+        <!-- Contenido de la pagina -->
+        <section class="footer_categoria_wrapper sections">
+          
+          <article>
+              <h3>NOTICIAS</h3>
+              <ul>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+            </ul>
+            </article>
+            <article>
+              <h3>ESTRENOS</h3>
+              <ul>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+            </ul>
+            </article>
+            <article>
+              <h3>RATING</h3>
+              <ul>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+                <li><a href="">listaPelicula</a></li>
+            </ul>
+            </article>
+          <article>
+            <h3>FOROS</h3>
+            <ul>
+              <li><a href="">listaPelicula</a></li>
+              <li><a href="">listaPelicula</a></li>
+              <li><a href="">listaPelicula</a></li>
+              <li><a href="">listaPelicula</a></li>
+              <li><a href="">listaPelicula</a></li>
+              <li><a href="">listaPelicula</a></li>
+          </ul>
+          </article>
+        </section>
+      </section>
+      <!-- Copyright -->
+      <section>
+        <div>
+          <p>CineAnime © 2022-2023</p>
+      </div>
+          <div>
+              <a href="">Some text for policy</a>
+          </div>
+      </section>
+  </footer>
+    <!-- End footer -->
+
+    <!-- Animaciones para el abrir y cerrar el menu de navegacion en dispositivos maviles y tablets -->
+  <script src="js/animations.js"></script>
+  <script>
+    /*
+    * Este es un pequeño script para animar al manu hamburguesa.
+    * Debo dejar en claro que el script procede de la misma libreria no ha sido creado por mi.
+    */
+  var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+  var hamburgers = document.querySelectorAll(".hamburger");
+  if (hamburgers.length > 0) {
+    forEach(hamburgers, function(hamburger) {
+      hamburger.addEventListener("click", function() {
+        this.classList.toggle("is-active");
+      }, false);
+    });
+  }
+  </script>
+  </body>
+</html>

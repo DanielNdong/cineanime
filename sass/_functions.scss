@@ -1,0 +1,6 @@
+/* Pasar de pixeles a rem */
+@function tpx($size) {
+    $remSize: calc($size / 16);
+    @return #{$remSize}rem;
+}
+
