@@ -1428,7 +1428,6 @@ hr {
   }
   .recientes_img figcaption {
     height: 7.5rem;
-    top: 7.5rem;
   }
   .recientes_aside_wrapper {
     width: 50rem;
@@ -1454,18 +1453,6 @@ hr {
   }
   .trailers {
     height: 56.25rem;
-    /*     figure {
-          position: relative;
-          width: 100%;
-          //Establecemos las propiedades del icono de "Play" 
-          span {
-            position: absolute;
-            top: 0;
-            left: 60px;
-            font-size: 30px;
-            z-index: 1;
-          }
-        } */
   }
   .trailers_labelsWrapper {
     display: flex;
@@ -1705,6 +1692,7 @@ hr {
     padding: 0 1.25rem;
     display: grid;
     grid-template-areas: "logo . media" "sections . media" "sections . .";
+    justify-content: space-between;
   }
   footer .footer_container .logo {
     grid-area: logo;
@@ -1958,10 +1946,10 @@ hr {
   }
   /* Fin de contenedor de navegacion */
   main {
-    margin: 0 8rem;
+    margin: 0 7rem;
   }
   .container {
-    padding: 0 3rem;
+    padding: 0 2rem;
     background-color: #e3e0e0;
   }
   /* Caroussel de la cabecera */
@@ -1984,7 +1972,7 @@ hr {
   }
   .recientes_noticias {
     height: auto;
-    margin-right: 2rem;
+    margin-right: 0.3rem;
     width: 70%;
   }
   .recientes_titulo {
@@ -2012,7 +2000,7 @@ hr {
     -o-border-radius: 0.1875rem;
     /* Aqui le estamos restando la altura de su contenedor padre menos la altura del header del contenedor para que asi este elemento 'encaje' sin sufrir desbordamiento*/
     height: 82%; /* Era : calc(100% - 13%) */
-    /* Habra q poner alguna imagen */
+    overflow: hidden;
   }
   .recientes_img img {
     text-align: center;
@@ -2035,10 +2023,10 @@ hr {
   }
   .recientes_aside {
     width: 30%;
-    height: 24.6875rem;
+    height: auto;
     overflow: hidden;
-    margin-right: 1.25rem;
-    margin-top: 4.09375rem;
+    margin-right: 0;
+    margin-top: 4.1rem;
     /* recientes_aside_wrapper */
   }
   .recientes_aside article {
@@ -2057,10 +2045,20 @@ hr {
   }
   .recientes_aside figure figcaption {
     position: absolute;
-    top: 25%;
-    background-color: #333333;
+    bottom: 0;
+    background-color: rgba(15, 14, 14, 0.682);
     width: 100%;
     height: 5rem;
+  }
+  .recientes_aside figure figcaption h3 {
+    font-size: 1rem;
+    color: #ede9e9;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-bottom: solid 0.2rem #e01d0b;
+    padding: 0.5rem;
+    letter-spacing: 2px;
   }
   .recientes_aside div {
     text-align: center;
@@ -2073,13 +2071,22 @@ hr {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    gap: 1.25rem;
+    gap: 0;
+    margin-bottom: 0;
+  }
+  .recientes .aside_wrapper_items:first-child {
+    margin-bottom: 0.3rem;
   }
   .recientes .aside_wrapper_items {
     width: 100%;
+    height: 46.2%;
   }
   .recientes .aside_wrapper_items img {
+    width: 100%;
     height: 100%;
+  }
+  .recientes .aside_wrapper_items figcaption {
+    bottom: 0;
   }
   .recientes .aside_wrapper_items:nth-child(n+3) {
     display: none;
@@ -2088,11 +2095,20 @@ hr {
   .rodajes {
     display: flex;
     /* rodajes_aside */
-    /* Le damos este margin a todos los items excepto al primero */
   }
   .rodajes_art {
     margin-right: 2rem;
     width: 70%;
+  }
+  .rodajes_art div {
+    text-align: center;
+    margin-top: 3.125rem;
+  }
+  .rodajes_art div a:hover {
+    color: #555555;
+  }
+  .rodajes_art div a:active {
+    color: #8B8A8B;
   }
   .rodajes_titulo {
     border-radius: 0.125rem;
@@ -2113,6 +2129,7 @@ hr {
   }
   .rodajes_info {
     display: flex;
+    position: relative;
     height: 14.375rem;
     /* Le damos este margin a todos los items excepto al primero */
   }
@@ -2128,49 +2145,73 @@ hr {
     width: 67%;
     height: 100%;
     margin: 0 auto;
+    background-color: inherit;
   }
   .rodajes_info figcaption h3 {
-    font-size: 1.6875rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #191919;
   }
   .rodajes_info figcaption p {
     font-family: "Roboto";
     height: 76%;
   }
+  .rodajes_info:hover figcaption {
+    background-color: rgba(235, 235, 235, 0.5803921569);
+  }
+  .rodajes_info:hover::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 30%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(17, 1, 1, 0.148);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
   .rodajes_aside {
     margin-top: 4.6875rem;
-    width: 30%;
+    width: 26%;
+    padding: 1rem 0 1rem;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     display: initial;
+    background-color: #ea2a12;
+    box-shadow: inset 10px 10px 10px #cd1a1a;
   }
   .rodajes_item {
-    width: 80%;
-    height: 15.625rem;
+    width: 90%;
+    height: 10rem;
     margin: auto;
+    border-radius: 0.5rem;
   }
   .rodajes_item img {
     display: block;
+    width: 100%;
     height: 66.7%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .rodajes_item figcaption p {
-    background-color: green;
-    height: 2.125rem;
-    /* puntos suspensivos, todavia falta */
+  .rodajes_item figcaption {
+    background-color: #ffffff;
+    padding: 0.4rem 0.3rem;
+  }
+  .rodajes_item figcaption p, .rodajes_item figcaption h3 {
+    font-family: "Roboto";
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-family: "Roboto";
+    color: black;
+    font-weight: 500;
   }
-  .rodajes_item:not(.first) {
-    margin-top: 1.25rem;
-  }
-  .rodajes div {
-    text-align: center;
-    margin-top: 3.125rem;
-  }
-  .rodajes div a:hover {
-    color: #555555;
-  }
-  .rodajes div e:active {
-    color: #8B8A8B;
+  .rodajes_item figcaption p {
+    font-size: 0.8rem;
   }
   /* Trailers */
   .trailers {
@@ -2254,9 +2295,7 @@ hr {
     display: grid;
     grid-template-areas: "peliculas peliculas series" "peliculas peliculas animes";
     grid-template-columns: 3fr 1fr 2fr;
-    -moz-column-gap: 0.125rem;
-    gap: 1rem;
-    /* Definimos las reglas al scroll */
+    gap: 0.3rem;
   }
   .trailers_genero > figure {
     max-width: -webkit-fill-available;
@@ -2276,6 +2315,9 @@ hr {
   }
   .trailers_genero > figure:nth-child(3) {
     grid-area: animes;
+  }
+  .trailers .trailers_genero figure:not(figure:first-child) {
+    margin-top: 0;
   }
   /* DC VS MARVEL */
   .dcmar_titulo {
@@ -2347,6 +2389,23 @@ hr {
     -o-object-fit: cover;
        object-fit: cover;
     background-color: rgb(84, 84, 84);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+  }
+  .dcmar_imgcon figure:hover img {
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
   }
   .dcmar_imgcon figure::after {
     position: absolute;
