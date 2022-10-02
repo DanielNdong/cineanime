@@ -340,28 +340,48 @@ main {
       color: $grisTono1;
     }
 
+    label:nth-child(1):hover{
+      background-color: rgb(41, 41, 41);
+      transition: all .3s ease-in;
+    }
+    label:nth-child(1):active{
+      background-color: rgb(122, 31, 31);
+    }
+
     label:nth-child(1){
         position: absolute;
-        content: "<i class='fa-solid fa-arrow-left'></i>";
+        content: url("../assets/icons/left-arrow-svgrepo-com.svg");
         top: calc(100% - 67%);
         left: -10px;
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
+        @include myFlex();
+        padding: .3rem;
         border-radius: 50%;
-        background-color: rgba(173, 173, 173, 0.925);
+        background-color: rgba(26, 25, 25, 0.925);
         backdrop-filter: blur(1px);
         border: solid .18em #fff;
         z-index: 2;
     }
+
+    label:nth-child(2):hover{
+      background-color: rgb(41, 41, 41);
+      transition: all .3s ease-in;
+    }
+    label:nth-child(2):active{
+      background-color: rgb(122, 31, 31);
+    }
     label:nth-child(2){
         position: absolute;
-        content: "<i class='fa-solid fa-arrow-right'></i>";
+        content: url("../assets/icons/right-arrow-svgrepo-com.svg");
         top: calc(100% - 67%);
         right: -10px;
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
+        @include myFlex();
+        padding: .3rem;
         border-radius: 50%;
-        background-color: rgba(173, 173, 173, 0.925);
+        background-color: rgba(26, 25, 25, 0.925);
         backdrop-filter: blur(1px);
         border: solid .18em #fff;
         z-index: 2;
