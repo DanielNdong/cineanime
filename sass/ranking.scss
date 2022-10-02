@@ -342,7 +342,7 @@ main {
 
     label:nth-child(1){
         position: absolute;
-        content: "";
+        content: "<i class='fa-solid fa-arrow-left'></i>";
         top: calc(100% - 67%);
         left: -10px;
         width: 2.4rem;
@@ -355,7 +355,7 @@ main {
     }
     label:nth-child(2){
         position: absolute;
-        content: "";
+        content: "<i class='fa-solid fa-arrow-right'></i>";
         top: calc(100% - 67%);
         right: -10px;
         width: 2.4rem;
