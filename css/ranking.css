@@ -374,29 +374,51 @@ main > section > p a:hover::after {
 .ranking h2, .ranking h3 {
   color: #333333;
 }
+.ranking label:nth-child(1):hover {
+  background-color: rgb(41, 41, 41);
+  transition: all 0.3s ease-in;
+}
+.ranking label:nth-child(1):active {
+  background-color: rgb(122, 31, 31);
+}
 .ranking label:nth-child(1) {
   position: absolute;
-  content: "";
+  content: url("../assets/icons/left-arrow-svgrepo-com.svg");
   top: 33%;
   left: -10px;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
   border-radius: 50%;
-  background-color: rgba(173, 173, 173, 0.925);
+  background-color: rgba(26, 25, 25, 0.925);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   border: solid 0.18em #fff;
   z-index: 2;
 }
+.ranking label:nth-child(2):hover {
+  background-color: rgb(41, 41, 41);
+  transition: all 0.3s ease-in;
+}
+.ranking label:nth-child(2):active {
+  background-color: rgb(122, 31, 31);
+}
 .ranking label:nth-child(2) {
   position: absolute;
-  content: "";
+  content: url("../assets/icons/right-arrow-svgrepo-com.svg");
   top: 33%;
   right: -10px;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
   border-radius: 50%;
-  background-color: rgba(173, 173, 173, 0.925);
+  background-color: rgba(26, 25, 25, 0.925);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   border: solid 0.18em #fff;
