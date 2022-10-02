@@ -1,0 +1,191 @@
+/* BLANCO */
+/* CONTAINER */
+/* GRIS */
+/* Enlaces */
+/* <hr> */
+/* Text area */
+/* Mis colores por defecto */
+/* NARANJA */
+/* Color para el hover de los botones de la seccion 'dc vs marvel' */
+/* Color para el estado 'active'de los enlace del encabezado */
+/* COLORMIND 1*/
+/* COLORMIND 2*/
+/* COLORMIND 3*/
+/* Pasar de pixeles a rem */
+/* BLANCO */
+/* CONTAINER */
+/* GRIS */
+/* Enlaces */
+/* <hr> */
+/* Text area */
+/* Mis colores por defecto */
+/* NARANJA */
+/* Color para el hover de los botones de la seccion 'dc vs marvel' */
+/* Color para el estado 'active'de los enlace del encabezado */
+/* COLORMIND 1*/
+/* COLORMIND 2*/
+/* COLORMIND 3*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+header {
+  background-color: #e01d0b;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  background-color: #fff;
+}
+main > .back {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0.5rem 0 0 1rem;
+  transition: all 0.2s ease-in-out;
+}
+main > .back:hover a {
+  color: #191919;
+}
+main > .back::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #e01d0b;
+  transition: all 0.2s ease-in-out;
+}
+main > .back:hover::before {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+main > .back::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -0.41rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #d52616;
+  transition: all 0.3s ease-in-out;
+}
+main > .back:hover::after {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+section {
+  width: 80%;
+  height: calc(90% - 3rem);
+  margin: auto;
+  transform: translateY(10%);
+  /* El titulo y el comentario */
+  /* La etiqueta label para el checkbox */
+  /* Este es el contenedor de los elementos 'p' y 'a' que invitan a registrarse */
+}
+section > h2, section p {
+  text-align: center;
+  color: #333333;
+}
+section > p {
+  margin: 0.5rem 0 2rem;
+  color: #8B8A8B;
+}
+section label {
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 80%;
+  max-width: 30rem;
+  display: block;
+  padding-right: 1rem;
+  color: #555555;
+}
+section div:last-child {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  /* Texto */
+  /* Elemento con el texto "Registrate en CINEANIME" */
+}
+section div:last-child p {
+  color: #8B8A8B;
+}
+section div:last-child a:last-child {
+  width: 80%;
+  max-width: 20rem;
+  padding: 0.6rem 0;
+  text-align: center;
+  color: #8B8A8B;
+  background-color: #F3F3F2;
+  transition: all 0.2s ease-in;
+}
+section div:last-child a:last-child:hover {
+  background-color: #ede9e9;
+  color: #333333;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  /* Boton 'submit' */
+}
+form [type=email], form [type=password] {
+  margin: auto;
+  width: 80%;
+  max-width: 30rem;
+  padding: 0.7rem 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: solid 1.9px rgb(192, 192, 192);
+  border-radius: 0.2rem;
+}
+form [type=email]:hover, form [type=password]:hover {
+  outline: solid 1.9px rgb(83, 83, 83);
+}
+form [type=email]:focus, form [type=password]:focus {
+  outline: solid 2px rgb(59, 58, 58);
+  border: none;
+}
+form div:last-child {
+  margin: 2rem 0 0;
+}
+form div:last-child input {
+  width: 80%;
+  max-width: 20rem;
+  padding: 0.6rem 0;
+  background-color: #e36559;
+  border: none;
+  border-radius: 0.1rem;
+  color: #ede9e9;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.1s ease-in;
+}
+form div:last-child input:hover {
+  background-color: rgb(212, 77, 67);
+}
+form div:last-child input:active {
+  background-color: rgb(199, 17, 4);
+}/*# sourceMappingURL=login.css.map */
