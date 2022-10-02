@@ -1,0 +1,169 @@
+@import "../sass/mixins";
+@import "../sass/variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $grisTono2;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+header{
+    background-color: $orange;
+    height: 3rem;
+    @include myFlex();
+}
+
+main{
+    height: 100vh;
+    background-color: #fff;
+
+    & > .back {
+        position: relative;
+        width: max-content;
+        margin: .5rem 0 0 1rem;
+        transition: all .2s ease-in-out;
+    }
+    & > .back:hover a{
+        color: $negro;
+    }
+    & > .back::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -.2rem;
+        width: 0;
+        height: .2rem;
+        background-color: $orange;
+        transition: all .2s ease-in-out;
+      }
+    & > .back:hover::before{
+        width: 100%;
+        transition: all .2s ease-in-out;
+      }
+      & > .back::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -.41rem;
+        width: 0;
+        height: .2rem;
+        background-color: $orange4;
+        transition: all .3s ease-in-out;
+      }
+      & > .back:hover::after{
+        width: 100%;
+        transition: all .3s ease-in-out;
+      }
+}
+
+section{
+    width: 80%;
+    height: calc(90% - 3rem);
+    margin: auto;
+    transform: translateY(calc(100% - 90%));
+   /* El titulo y el comentario */
+    & > h2,p{
+        text-align: center;
+        color: $grisTono1;
+    }
+
+    & >  p{
+        margin: .5rem 0 2rem;
+        color: $gris;
+    }
+
+    /* La etiqueta label para el checkbox */
+    label{
+        margin: auto;
+        margin-top: .5rem;
+        width: 80%;
+        max-width: 30rem;
+        display: block;
+        padding-right: 1rem;
+        color: $grisTono2;
+    }
+    /* Este es el contenedor de los elementos 'p' y 'a' que invitan a registrarse */
+    div:last-child{
+        margin-top: 5rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+
+        /* Texto */
+        p{
+            color: $gris;
+        }
+        /* Elemento con el texto "Registrate en CINEANIME" */
+        a:last-child{
+            width: 80%;
+            max-width: 20rem;
+            padding: 0.6rem 0;
+            text-align: center;
+            color: $gris;
+            background-color: $blanco2;
+            transition: all .2s ease-in;
+        }
+        a:last-child:hover{
+            background-color: $blanco;
+            color: $grisTono1;
+        }
+    }
+}
+
+form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+
+    [type="email"],[type="password"]{
+        margin: auto;
+        width: 80%;
+        max-width: 30rem;
+        padding: 0.7rem 0.5rem;
+        font-size: 1rem;
+        border: none;
+        outline: solid 1.9px rgb(192, 192, 192);
+        border-radius: .2rem;
+        }
+        [type="email"]:hover,[type="password"]:hover{
+            outline: solid 1.9px rgb(83, 83, 83);
+        }
+        [type="email"]:focus,[type="password"]:focus{
+            outline: solid 2px rgb(59, 58, 58);
+            border: none;
+        }
+        /* Boton 'submit' */
+    div:last-child{
+        margin: 2rem 0 0;
+
+        input{
+            width: 80%;
+            max-width: 20rem;
+            padding: .6rem  0;
+            background-color: $orange2;
+            border: none;
+            border-radius: .1rem;
+            color: $blanco;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all .1s ease-in;
+        }
+        input:hover{
+            background-color: rgb(212, 77, 67);
+        }
+        input:active{
+            background-color: rgb(199, 17, 4);
+        }
+    }
+}

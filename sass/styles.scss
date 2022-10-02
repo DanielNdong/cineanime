@@ -14,7 +14,7 @@ html {
 
 hr {
   width: 90%;
-  height: tpx(3);
+  height: tpx(1);
   margin: tpx(83) 0;
   background-color: $linea;
   border: none;
@@ -29,6 +29,10 @@ h3,
 li,
 span {
   color: rgb(229, 229, 230);
+}
+
+a{
+  cursor: pointer;
 }
 
 h1 {
@@ -70,19 +74,23 @@ img {
 }
 
 hr {
-  margin: tpx(40);
+  margin: 1rem 2.5rem 2rem;
   width: auto;
 }
 
 .header {
   width: 100vw;
   min-height: 60px;
-  background-color: $negroSuave;
+  background-color: $orange;
   position: relative;
+
+  [type="checkbox"]{
+    visibility: hidden;
+  }
   &_logo {
     position: absolute;
     z-index: 1;
-    top: 21px;
+    top: 7px;
     left: 5px;
   }
   &_notificacion {
@@ -105,42 +113,54 @@ hr {
     display: none;
     position: sticky;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     z-index: 4;
     background-color: inherit;
-    padding-top: 0.875rem;
+    transform: translateY(60px);
+    border-bottom: solid 1.9px #e16767;
   }
   &_navegacion {
     width: max-content;
     margin: auto;
-    margin-top: tpx(40);
+    margin-top: 0;
+    transform: translateY(-30px);
     /* display: grid; */
   }
   &_cbusqueda {
-    margin-top: tpx(20);
+    ::placeholder{
+      color: $orange3;
+      transition: all .2s ease-in;
+    }
+
     [type="search"] {
-      width: tpx(230);
-      padding: tpx(10);
-      background-color: $negro;
-      outline: solid 2px $blanco;
+      width: 100%;
+      height: tpx(38);
+      padding: 0 tpx(12) 0 tpx(12);
+      background-color: rgb(197, 10, 10);
+      outline: solid tpx(2) #df5d5d;
+      color: rgb(240, 240, 240);
       border: none;
-      border-radius: tpx(20);
-      -webkit-border-radius: tpx(20);
-      -moz-border-radius: tpx(20);
-      -ms-border-radius: tpx(20);
-      -o-border-radius: tpx(20);
-    } /* form{
-        justify-self: center;
-      }
- */
+      border-radius: tpx(19);
+      -webkit-border-radius: tpx(19);
+      -moz-border-radius: tpx(19);
+      -ms-border-radius: tpx(19);
+      -o-border-radius: tpx(19);
+    }
+    [type="search"]:focus{
+      color: $grisTono1;
+      outline: solid tpx(2) $orange;
+      background-color: rgb(240, 240, 240);
+    }
+    [type="search"]:focus::placeholder{
+      color: rgb(80, 80, 80);
+    }
+
     & + ul {
-      width: max-content;
-      margin: auto;
-      margin-top: tpx(20);
+      width: 100%;
 
       li {
-        margin: 0 tpx(10);
-        padding: tpx(10);
+        margin: .5rem;
+        border-bottom: solid .18rem $blanco;
         user-select: none;
         -webkit-touch-callout: none; /* iOS Safari */
         -webkit-user-select: none; /* Safari */
@@ -148,6 +168,8 @@ hr {
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
         a {
+          width: 100%;
+          display: block;
           user-select: none;
           -webkit-touch-callout: none; /* iOS Safari */
           -webkit-user-select: none; /* Safari */
@@ -159,21 +181,24 @@ hr {
     }
   }
   &_lgsg {
-    padding: tpx(17) 0 0;
+    margin: 1rem 0 0;
     text-align: center;
-
-    .logins:hover {
-      text-decoration: underline;
-      color: khaki;
-    }
-    a,
-    p {
+   
+    .logins {
+      padding: .5rem;
+      background-color: $blanco;
+      color: $orange;
       font-size: tpx(15);
+      margin: 0 .3rem;
+      border-radius: .2rem;
+    }
+    .logins:active{
+      background-color: $blanco1;
+      color: $grisTono1;
     }
   }
   &_media_wrapper {
-    margin: tpx(10) 0;
-    gap: tpx(50);
+    margin: 1rem 0 0;
     text-align: center;
 
     h3 {
@@ -182,42 +207,17 @@ hr {
 
     ul {
       margin-top: tpx(10);
-      display: flex;
-      justify-content: center;
+      @include myFlex();
       gap: tpx(10);
 
       li {
-        width: tpx(30);
-        height: tpx(30);
+        @include myFlex();
+        width: tpx(23);
+        height: tpx(23);
         border-radius: 50%;
         background-color: $negroclaro;
         position: relative;
         overflow: hidden;
-      }
-
-      li::before {
-        animation: waves 2s infinite linear;
-        filter: blur(4px);
-        position: absolute;
-        content: "";
-        bottom: tpx(-0);
-        right: 0;
-        background: linear-gradient(rgb(54, 54, 54) 0%, rgb(109, 108, 108) 80%);
-        width: 100%;
-        height: 80%;
-        transform: skew(90rad);
-      }
-
-      @keyframes waves {
-        from {
-          bottom: -75%;
-        }
-        /*  30%{
-            bottom: tpx(20);
-          } */
-        to {
-          bottom: 120%;
-        }
       }
 
       i {
@@ -268,25 +268,22 @@ hr {
   -o-transform: rotate(180deg);
 }
 .stikybutton:hover{
-  background-color: $orange1 !important;
-}
-.stikybutton:focus{
-  background-color: $orange2 !important;
+  background-color: $blanco !important;
 }
 .stikybutton:active{
   background-color: $orange2 !important;
 }
 .caroussel {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   overflow: hidden;
   &_wrapper {
     width: 400%;
     height: 100%;
     display: flex;
     scroll-snap-type: x mandatory;
-    animation: imageScroll 19.2s 1.5s infinite alternate;
-    -webkit-animation: imageScroll 19.2s 1.5s infinite alternate;
+    animation: imageScroll 10.2s infinite;
+    -webkit-animation: imageScroll 10.2s 1.5s infinite ;
     
     @keyframes imageScroll{
       0% {
@@ -332,7 +329,7 @@ hr {
 .recientes {
   margin-top: tpx(20);
 
-  & > p,.otn{
+  & > p, .otn{
     /* color: $grisTono1; */
     margin-bottom: 1rem;
     border-bottom: solid 2px $orange;
@@ -363,7 +360,7 @@ hr {
       background-color: rgba(2, 2, 2, 0.607);
 
       h3{
-        width: max-content;
+        width: 100%;
         border-bottom: solid .2rem $orange;
         letter-spacing: tpx(2);
       }
@@ -375,7 +372,8 @@ hr {
   }
 
   &_aside {
-    overflow-X: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
 
     h2,h3{
@@ -388,7 +386,7 @@ hr {
       display: grid;
       grid-template: 235px / repeat(6, 128px);
       justify-content: start;
-      align-items: center;
+      align-items: start;
 
       .aside_wrapper_items/* figure */ {
         text-align: center;
@@ -442,7 +440,8 @@ hr {
       }
 
       h3{
-        width: max-content;
+        width: 90%;
+        max-width: max-content;
         border-bottom: solid .2rem $orange;
       }
 
@@ -456,7 +455,39 @@ hr {
   &_art div:last-child{
     margin-top: 1rem;
     a{
-      @include enlaces();
+      position:relative;
+      color: $grisTono1
+    }
+    a:hover{
+      color: $gris;
+    }
+    a::before{
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -.2rem;
+      width: 0;
+      height: .2rem;
+      background-color: $orange;
+      transition: all .2s ease-in-out;
+    }
+    a:hover::before{
+      width: 100%;
+      transition: all .2s ease-in-out;
+    }
+    a::after{
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -.4rem;
+      width: 0;
+      height: .2rem;
+      background-color: $orange1;
+      transition: all .3s ease-in-out;
+    }
+    a:hover::after{
+      width: 100%;
+      transition: all .3s ease-in-out;
     }
   }
 
@@ -471,8 +502,9 @@ hr {
 
   .labelButton{
     height: 2rem;
-    border: solid .2rem $blanCont;
     background-color: $blanCont;
+    transition: all .3s ease-in;
+    border:solid .2rem #14c54f07;
   }
   .labelButton:hover{
     background-color: $blanco2;
@@ -481,35 +513,45 @@ hr {
     background-color: $gris2;
   }
   .labelButton:focus{
+    border:solid .2rem #c52014;
     background-color: #ffff;
   }
   label {
     position: relative;
     margin: tpx(13) tpx(10) tpx(10);
-    padding:.5rem .5rem;
-    font-size: tpx(11);
-    font-weight: 500;
+    padding: .5rem .5rem;
     color: $orange;
     font-weight: 500;
     font-size: tpx(18);
+    transition: all .2s ease-in-out;
   }
-  label::before {
+ .labelButton label::before{
     position: absolute;
     content: "";
-    width: 0%;
-    height: tpx(4.5);
-    bottom: 0;
     left: 0;
+    bottom: .25rem;
+    width: 0;
+    height: .2rem;
     background-color: $orange;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
-  .labelButton:focus label::before {
+  .labelButton:focus label:hover::before{
     width: 100%;
-    transition: all 0.2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+ .labelButton label::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: .44rem;
+    width: 0;
+    height: .2rem;
+    background-color: $orange;
+    transition: all .3s ease-in-out;
+  }
+  .labelButton:focus label:hover::after{
+    width: 100%;
+    transition: all .3s ease-in-out;
   }
 
   [type="radio"] {
@@ -537,16 +579,20 @@ hr {
   }
 
   #pelis:checked + &_genero > figure {
-    background-color: red;
-    z-index: 1;
+    visibility: visible;
+    img {
+      object-fit: cover;
+    }
   }
   #series:checked + &_genero > figure {
-    background-color: rgb(60, 255, 0);
-    z-index: 1;
+    visibility: visible;
+    img {
+      object-fit: cover;
+    }
   }
+  
   #animes:checked + &_genero > figure {
-    z-index: 1;
-
+    visibility: visible;
     img {
       object-fit: cover;
     }
@@ -567,6 +613,7 @@ hr {
     figure {
       position: relative;
       overflow: hidden;
+      visibility: hidden;
     }
 
     img {
@@ -578,14 +625,22 @@ hr {
     }
     figcaption {
       position: absolute;
-      bottom: tpx(20);
+      bottom: 0;
       width: 100%;
       height: tpx(90);
-      padding: 0 0 0 tpx(20);
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      background-color: rgba(17, 17, 17, 0.626);
+      background-color: rgba(17, 17, 17, 0.671);
+
+      h3{
+        border-bottom: solid 0.2rem #e01d0b;
+        padding: 0 1rem;
+      }
+      p{
+        font-family: 'Roboto', sans-serif;
+        padding: 0 1rem;
+      }
     }
   }
 
@@ -610,8 +665,40 @@ hr {
   }
   
   a{
+    position:relative;
+    color: $grisTono1;
     font-weight: 300;
-    border-bottom: solid 2px $orange;
+  }
+  a:hover{
+    color: $gris;
+  }
+  a::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -.2rem;
+    width: 0;
+    height: .2rem;
+    background-color: $orange;
+    transition: all .2s ease-in-out;
+  }
+  a:hover::before{
+    width: 100%;
+    transition: all .2s ease-in-out;
+  }
+  a::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -.4rem;
+    width: 0;
+    height: .2rem;
+    background-color: $orange1;
+    transition: all .3s ease-in-out;
+  }
+  a:hover::after{
+    width: 100%;
+    transition: all .3s ease-in-out;
   }
 
   hr {
@@ -681,8 +768,18 @@ hr {
 .valoradas {
   &_titulo {
     @include encabezadosMobil();
+    display: inline-block;
   }
-
+  &_titulo + a{
+    color: #c51414;
+    float: right;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  &_titulo + a:hover{
+    color: $orange;
+  }
+  
   h3,h4,p{
     color: $grisTono1;
   }
@@ -725,9 +822,6 @@ hr {
   &_lista {
     & > ul > li {
       margin: tpx(15) 0;
-    }
-    & > ul > li:nth-child(odd) {
-      display: none;
     }
     figure {
       padding: 0 tpx(15) 0 0;
@@ -919,358 +1013,147 @@ hr {
     padding: tpx(5) tpx(15);
   }
 }
-/* Fin footer */
 
 /* ------------> MEDIA QUERIES ~MÓBIL~ */
 
 /* Iphone 5/SE (HEIGHT) */
 @media screen and (min-height: 481px) and (max-height: 568px) {
   .header {
-    &_navegacion {
-      margin-top: tpx(50);
-    }
     &_lgsg {
-      margin: tpx(70) 0 0;
+      margin: 2rem 0 0;
+    }
+  }
+}
+@media screen and (min-height: 569px) and (max-height: 580px) {
+  .header {
+    &_lgsg {
+      margin: 3rem 0 0;
+    }
+  }
+}
+@media screen and (min-height: 580px) {
+  .header {
+    &_lgsg {
+      margin: 4rem 0 0;
     }
   }
 }
 /* Samsung S9+ */
 @media screen and (min-width: 320px) and (min-height: 658px) {
   .header {
+    &_cnvg{
+      height: 43vh;
+    }
     &_navegacion {
-      margin-top: tpx(50);
+      margin-top: 0;
     }
     &_lgsg {
-      padding: tpx(150) 0 0;
-      text-align: center;
-
-      .logins {
-        font-size: 18px;
-      }
-      .logins:hover {
-        text-decoration: underline;
-        color: khaki;
-      }
+      margin: 2.2rem 0 0;
     }
     &_media_wrapper {
-      margin: tpx(50) 0;
-      text-align: center;
-
-      h3 {
-        display: none;
-      }
-
-      ul {
-        margin-top: tpx(10);
-        display: flex;
-        justify-content: center;
-        gap: tpx(10);
-
-        li {
-          width: tpx(30);
-          height: tpx(30);
-          border-radius: 50%;
-          background-color: $negroclaro;
-          position: relative;
-          overflow: hidden;
-        }
-
-        li::before {
-          animation: waves 2s infinite linear;
-          filter: blur(4px);
-          position: absolute;
-          content: "";
-          bottom: tpx(-0);
-          right: 0;
-          background: linear-gradient(
-            rgb(54, 54, 54) 0%,
-            rgb(109, 108, 108) 80%
-          );
-          width: 100%;
-          height: 80%;
-          transform: skew(90rad);
-        }
-
-        @keyframes waves {
-          from {
-            bottom: -75%;
-          }
-          /*  30%{
-            bottom: tpx(20);
-          } */
-          to {
-            bottom: 120%;
-          }
-        }
-
-        i {
-          font-size: tpx(20);
-        }
-      }
-      /* Contenido de la pagina */
-      & > section:nth-child(2) {
-        article {
-          margin: 0 tpx(20);
-
-          h3 {
-            margin-bottom: tpx(10);
-          }
-
-          li {
-            margin: tpx(10) 0;
-          }
-        }
-      }
+      margin: 1.5rem 0 0;
     }
   }
 }
 /* Samsung S8 */
 @media screen and (min-width: 360px) {
   .header {
-    /* Menu header wrapper */
-    &_cnvg {
-      display: none;
-      position: sticky;
-      width: 100vw;
-      height: 100vh;
-      z-index: 4;
-      background-color: inherit;
-      padding-top: 1.875rem;
+    &_cnvg{
+      height: 43vh;
     }
-    &_navegacion {
-      width: max-content;
-      margin: auto;
-      margin-top: tpx(40);
-    }
+
     &_cbusqueda {
+
       [type="search"] {
-        width: tpx(280);
-        padding: tpx(15);
-        background-color: $negro;
-        border: none;
-        border-radius: tpx(20);
-        -webkit-border-radius: tpx(20);
-        -moz-border-radius: tpx(20);
-        -ms-border-radius: tpx(20);
-        -o-border-radius: tpx(20);
-      }
-
-      & + ul {
-        width: max-content;
-        margin: auto;
-        margin-top: tpx(20);
-
-        li {
-          margin: 0 tpx(10);
-          padding: tpx(10);
-          user-select: none;
-          -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari */
-          -khtml-user-select: none; /* Konqueror HTML */
-          -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-          a {
-            font-size: tpx(20);
-            user-select: none;
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-          }
-        }
-        li:not(li:first-child) {
-          margin-top: tpx(10);
-        }
-      }
-    }
-    &_lgsg {
-      margin-top: tpx(70);
-      text-align: center;
-      line-height: 2;
-      font-weight: bold;
-
-      .logins:hover {
-        text-decoration: underline;
-        color: khaki;
-      }
-
-      a,
-      p {
-        font-size: tpx(16);
-      }
-    }
-    &_media_wrapper {
-      margin: tpx(40) 0;
-      gap: tpx(50);
-      text-align: center;
-
-      ul {
-        margin-top: tpx(10);
-        display: flex;
-        justify-content: center;
-        gap: tpx(15);
-
-        li {
-          width: tpx(30);
-          height: tpx(30);
-          border-radius: 50%;
-          background-color: $negroclaro;
-          position: relative;
-          overflow: hidden;
-        }
-
-        li::before {
-          animation: waves 2s infinite linear;
-          filter: blur(4px);
-          position: absolute;
-          content: "";
-          bottom: tpx(-0);
-          right: 0;
-          background: linear-gradient(
-            rgb(54, 54, 54) 0%,
-            rgb(109, 108, 108) 80%
-          );
-          width: 100%;
-          height: 80%;
-          transform: skew(90rad);
-        }
-
-        @keyframes waves {
-          from {
-            bottom: -75%;
-          }
-          /*  30%{
-            bottom: tpx(20);
-          } */
-          to {
-            bottom: 120%;
-          }
-        }
-
-        i {
-          font-size: tpx(20);
-        }
-      }
-      /* Contenido de la pagina */
-      & > section:nth-child(2) {
-        article {
-          margin: 0 tpx(20);
-
-          h3 {
-            margin-bottom: tpx(10);
-          }
-
-          li {
-            margin: tpx(10) 0;
-          }
-        }
-      }
-    }
-  }
-}
-/* Samsung S5 S8+ */
-@media screen and (min-width: 360px) and (min-height: 640px) and (max-height: 657px) {
-  .header {
-    &_lgsg {
-      margin-top: tpx(20);
-      text-align: center;
-      line-height: 2;
-      font-weight: bold;
-
-      .logins:hover {
-        text-decoration: underline;
-        color: khaki;
-      }
-
-      a,
-      p {
-        font-size: tpx(16);
+        width: 13rem;
       }
     }
 
-    &_media_wrapper {
-      margin: tpx(10) 0;
-    }
-  }
-}
-/* Samsung S8 y S8+ (HEIGHT) //NO HAY NADA*/
-@media screen and (min-height: 740px) {
-  .header {
-    &_lgsg {
-      margin: tpx(0) 0;
-    }
-    &_media_wrapper {
-      margin: tpx(0) 0;
-    }
-  }
-}
-/* @media screen and (min-height: 760px){
-  .header{
     &_lgsg{
-      margin-top: tpx(0);
+      margin: 1rem 0 0 ;
     }
-    &_cbusqueda + ul{
-      
-      margin: 0 auto 0 0;
+
+    &_media_wrapper {
+      margin: 1.2rem 0 0;
     }
   }
-} */
+}
+/*  Samsung S III */
+@media screen and (min-width: 360px) and (min-height: 640px) {
+  .header {
+    &_cnvg{
+      height: 43vh;
+    }
+    &_navegacion{
+      margin-top: 0;
+    }
+    &_lgsg {
+      margin-top: 2.5rem;
+    }
+
+    &_media_wrapper {
+      margin: 1.9rem 0 0;
+    }
+  }
+}
+
+/* Samsung S5 S8+ */
+@media screen and (min-width: 360px) and (min-height: 740px) {
+  .header {
+    &_cnvg{
+      height: 38vh;
+    }
+    &_navegacion{
+      margin-top: 0;
+    }
+    &_lgsg {
+      margin-top: 2.5rem;
+    }
+
+    &_media_wrapper {
+      margin: 1.9rem 0 0;
+    }
+  }
+}
 
 /* Iphone SE */
 @media screen and (min-width: 375px) {
   .header {
+    &_cnvg{
+      height: 40vh;
+    }
     &_lgsg {
-      margin: tpx(80) 0 tpx(5);
+      margin: 2rem 0 tpx(5);
       padding: tpx(0);
       line-height: 1;
     }
+    &_media_wrapper{
+    margin: 2rem  0 0;
   }
+}
 }
 /* Iphone X */
 @media screen and (min-width: 375px) and (min-height: 812px) {
   .header {
+    &_cnvg{
+      height: 36vh
+    }
     &_lgsg {
-      margin: tpx(230) 0 tpx(20);
+      margin: 2rem 0 0;
       line-height: 1.5;
     }
     &_media_wrapper {
-      margin: tpx(0) 0;
+      margin: 1.5rem 0 0;
     }
   }
-}
-/* Iphone 12 pro //NO HAY NADA*/
-@media screen and (min-width: 390px) {
-  /* Cambiamos los parametros del translate que corresponden a las dimensiones del width de los items del caroussel */
-  /*   .caroussel_wrapper {
-    @keyframes imageScroll {
-      0% {
-        transform: translateX(0);
-      }
-      40% {
-        transform: translateX(-340px);
-      }
-      70% {
-        transform: translateX(-680px);
-      }
-      100% {
-        transform: translateX(-1020px);
-      }
-    }
-  } */
 }
 /* Samsung A51/71, S20 Ultra */
-@media screen and (min-width: 412px) and (min-height: 914px) {
+@media screen and (min-width: 412px){
   .header {
-    &_lgsg {
-      margin: tpx(300) 0 0;
-    }
-    &_media_wrapper {
-      margin-top: tpx(40);
+    &_cnvg{
+      height: 36vh
     }
   }
-}
-@media screen and (min-width: 412px){
   .dcmar{
     &_imgcon{
       justify-content: center;
@@ -1284,6 +1167,13 @@ hr {
   }
 
 }
+@media screen and (min-width: 412px) and (min-height: 914px) {
+  .header {
+    &_cnvg{
+      height: 33vh
+    }
+  }
+}
 /* Iphone 6/7/8 plus*/
 @media screen and (min-width: 414px) and (min-height: 896px) {
   .header {
@@ -1292,9 +1182,12 @@ hr {
     }
   }
 }
-
+@media screen and (min-height: 678px) and (min-width: 500px) {
+  .header_cnvg {
+    height: auto;
+  }
+}
 /* ---------------> MEDIA QUERIES ~TABLETS~ */
-
 /* Surface Duo */
 @media screen and (min-width: 540px) {
   .stikybutton {
@@ -1318,25 +1211,14 @@ hr {
       z-index: 4;
       /* visibility: hidden; */
     }
-    [type="checkbox"]:checked ~ &_menuHmb {
-      left: tpx(220);
-    }
     [type="checkbox"]:checked ~ &_cnvg {
       position: absolute;
       display: block;
       margin: auto;
-      width: 50vw;
-      height: 100vh;
-      font-weight: 300;
-      background-color: $negro;
-      overflow-y: scroll;
+      width: 100vw;
       
-      .header_navegacion {
-        height: 105vh;
-        width: 100%;
-      }
       .header_cbusqueda {
-        width: 70%;
+        width: 74%;
         margin: auto;
         [type="search"] {
           width: 100%;
@@ -1345,12 +1227,19 @@ hr {
       }
 
       .header_lgsg {
-        margin: tpx(150) 0 0;
         padding: 0 tpx(20);
       }
       .header_media_wrapper {
         margin: tpx(20) 0 0;
       }
+    }
+  }
+  .caroussel{
+    height:25vh;
+   & img{
+      position: absolute;
+      height: 20rem;
+      width: 48rem;
     }
   }
   .recientes {
@@ -1381,12 +1270,17 @@ hr {
       display: flex;
     }
     img {
-      height: tpx(300);
+      height: 13.75rem;
     }
     figcaption {
+      margin-top: 0;
       padding: .2rem 0 0 1rem;
       height: auto;
       background-color: rgba(180, 180, 180, 0.178);
+
+      p{
+        width: 70%;
+      }
     }
   }
   .trailers {
@@ -1408,20 +1302,21 @@ hr {
       flex-direction: column;
     }
     &_genero {
-      gap: 0;
+      height: 100%;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
+      gap: 0;
 
       figure {
         margin-top: tpx(10);
         width: 100%;
-        /* width: tpx(300); */
-        max-width: 490px;
+        max-width: 100%;
+        height: 33.3%;
 
         img {
-          height: tpx(260);
+          height: 100%;
         }
       }
     }
@@ -1664,242 +1559,318 @@ hr {
   }
 
 }
-/* Galaxy TAB S4 */
-@media screen and (min-width: 712px) {
+/* Aqui corrijo el problema con el ancho de las imagenes del caroussel */
+@media screen and (min-width: 760px){
+.caroussel {
+  height: 18rem;
+  img {
+    position: absolute;
+    height: 38rem;
+    width: 33.3%;
 }
-/* Galaxy TAB S4 */
+}
+}
 @media screen and (min-width: 768px) {
-}
-/* iPad Air */
-@media screen and (min-width: 820px) {
+  #hamburguesa {
+    display: none;
+  }
+  .header{
+    /* header logo */
+    &_logo {
+      display: none;
+    }
+    /* Contenedor del notificaciones */
+    &_notificacion {
+      display: none;
+      min-height: tpx(5);
+      max-height: auto;
+      background-color: $rojo;
+    }
+  
+    &_aviso {
+      margin: tpx(8) tpx(8) tpx(8);
+      width: calc(100% - tpx(130));
+      p{
+        font-size: tpx(12);
+        font-family: 'Roboto';
+        font-weight: 500;
+        letter-spacing: .76px
+      }
+    }
+  
+    /* Header "redes sociales */
+    &_rs {
+      width: tpx(100);
+    }
+    &_rs > ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_rs > ul > li {
+      transform: scale(0.8);
+      transition: all 0.3s ease-in;
+      -webkit-transition: all 0.3s ease-in;
+      -moz-transition: all 0.3s ease-in;
+      -ms-transition: all 0.3s ease-in;
+      -o-transition: all 0.3s ease-in;
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+    }
+    /* Le damos animacion al conteneodr de los iconos */
+    &_rs > ul > li:hover {
+      animation: liicon 0.2s 1 ease-in-out forwards;
+      -webkit-animation: liicon 0.2s 1 ease-in-out forwards;
+    }
+    /* Iconos del header */
+    &_rs > ul i {
+      font-size: tpx(22);
+    }
+    /* Animamos a los iconos una vez se haya hecho hover a los 'li'  */
+    &_rs > ul > li:hover i {
+      animation: icon 0.2s 1 ease-in-out forwards;
+      -webkit-animation: icon 0.2s 1 ease-in-out forwards;
+    }
+  
+    @keyframes liicon {
+      0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+      }
+  
+      100% {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+      }
+      /* Haciendo esto conseguimos que la imagen no se vuelva borrosa al momento que ocurre la animacion */
+    }
+  
+    @keyframes icon {
+      0% {
+        font-size: tpx(22);
+      }
+  
+      100% {
+        font-size: tpx(22);
+      }
+    }
+    /* Fin de header notificacion */
+  
+    /* Contenedor de navegacion */
+    &_cnvg {
+      display: flex !important;
+      width: 100%;
+      height: 4.6rem;
+      padding: 0;
+      justify-content: flex-end;
+      background-color: $orange;
+      border-bottom: solid tpx(2) rgb(145, 15, 15);
+      box-shadow: inset 0px 2px 10px #950404;
+      transform: translateY(0px);
+  
+      & > div:first-child {
+        /*  */
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: tpx(100);
+        background-color: rgb(246, 209, 0);
+        overflow: hidden;
+  
+        a {
+          position: absolute;
+          background-color: rgb(59, 62, 61);
+          width: tpx(200);
+          height: tpx(110);
+          /* debo centrarlo bien con calc() */
+          left: calc(50% - 10.5%);
+          transition: all 1s ease;
+          -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -o-transition: all 1s ease;
+        }
+      }
+    }
+  
+    &_navegacion {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin: 0 3.5rem;
+      padding-bottom: 0;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(0px);
+    }
+      /* Input busqueda */
+      &_cbusqueda {
+        width: 13rem;
+        margin: 0;
+        & + ul {
+         margin: 0;
+        }
+    
+        ::placeholder{
+          color: $orange3;
+          transition: all .2s ease-in;
+        }
+    
+        [type="search"] {
+          width: 13rem;
+          height: tpx(38);
+          padding: 0 tpx(12) 0 tpx(12);
+          background-color: rgb(197, 10, 10);
+          outline: solid tpx(2) #df5d5d;
+          color: rgb(240, 240, 240);
+          border: none;
+          border-radius: tpx(19);
+          -webkit-border-radius: tpx(19);
+          -moz-border-radius: tpx(19);
+          -ms-border-radius: tpx(19);
+          -o-border-radius: tpx(19);
+        }
+        [type="search"]:focus{
+          color: $grisTono1;
+          outline: solid tpx(2) $orange;
+          background-color: rgb(240, 240, 240);
+        }
+        [type="search"]:focus::placeholder{
+          color: rgb(80, 80, 80);
+        }
+      }
+    &_cbusqueda + ul li{
+      @include myFlex();
+      margin: 0;
+      height: 100%;
+      padding: 0 .5rem;
+      border: none;
+    }
+    &_cbusqueda + ul li:hover{
+      background-color: $blanco2;
+      a{
+        color: $orange;
+      }
+      a:active{
+        color: $orange4;
+      }
+    }
+    &_cbusqueda + ul li:not(li:first-child) {
+      margin: 0;
+    }
+    &_listas {
+      height: 100%;
+      display: inline-flex;
+      justify-content: center;
+      
+      a {
+        color: rgb(235, 235, 235);
+      }
+    }
+  
+    /* Menu hamburguesa */
+    &_menuHmb {
+      display: none;
+      align-self: center;
+    }
+    /* Inicio de sesion y registro de usurio */
+    &_lgsg {
+      margin: 0 1rem;
+  
+      & div:first-child{
+        display: flex;
+        align-items: center;
+      }
+      & div:first-child > .logins{
+          position: relative;
+          padding: 0;
+          margin-right: .5rem;
+          background-color: inherit;
+          color: $blanco;
+          text-decoration: none;
+          transition: all .2s ease-in-out;
+        }
+        & div:first-child > .logins::before{
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -.38rem;
+          width: 0;
+          height: .2rem;
+          background-color: $blanco;
+          transition: all .2s ease-in-out;
+        }
+        & > div:first-child  .logins:hover::before{
+          width: 100%;
+          transition: all .2s ease-in-out;
+        }
+        & div:first-child > .logins::after{
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -.53rem;
+          width: 0;
+          height: .2rem;
+          background-color: $blanco1;
+          transition: all .3s ease-in-out;
+        }
+        & > div:first-child  .logins:hover::after{
+          width: 100%;
+          transition: all .3s ease-in-out;
+        }
+        & > div:first-child  .logins:hover{
+          color: $blanco1;
+          cursor: pointer;
+        }
+        & > div:first-child  .logins:active{
+          color: $blanco;
+        }
+    }
+    &_media_wrapper {
+      display: none;
+    }
+    /* Fin de contenedor de navegacion */
+    }
+
 }
 
 /*  ------------------> MEDIA QUERIES ~LAPTOPS~ */
 @media screen and (min-width: 1024px) {
-  #hamburguesa {
-    display: none;
-  }
-  /* header logo */
-  .header_logo {
-    display: none;
-  }
-  /* Contenedor del notificaciones */
-  .header_notificacion {
-    @include myFlex;
-    min-height: tpx(5);
-    max-height: auto;
-    background-color: $rojo;
-  }
+  .header{
+    &_notificacion{
+      @include myFlex;
 
-  .header_aviso {
-    margin: tpx(8) tpx(8) tpx(8);
-    width: calc(100% - tpx(130));
-    p{
-      font-size: tpx(12);
-      font-family: 'Roboto';
+    }
+    &_cbusqueda + ul li a {
+      font-size: 1.25rem;
+    }
+    &_lgsg .logins{
+      font-size: 1rem;
     }
   }
-
-  /* Header "redes sociales */
-  .header_rs {
-    width: tpx(100);
-  }
-  .header_rs > ul {
-    display: flex;
-    justify-content: space-between;
-  }
-  .header_rs > ul > li {
-    transform: scale(0.8);
-    transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -ms-transition: all 0.3s ease-in;
-    -o-transition: all 0.3s ease-in;
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
-  }
-  /* Le damos animacion al conteneodr de los iconos */
-  .header_rs > ul > li:hover {
-    animation: liicon 0.2s 1 ease-in-out forwards;
-    -webkit-animation: liicon 0.2s 1 ease-in-out forwards;
-  }
-  /* Iconos del header */
-  .header_rs > ul i {
-    font-size: tpx(22);
-  }
-  /* Animamos a los iconos una vez se haya hecho hover a los 'li'  */
-  .header_rs > ul > li:hover i {
-    animation: icon 0.2s 1 ease-in-out forwards;
-    -webkit-animation: icon 0.2s 1 ease-in-out forwards;
-  }
-
-  @keyframes liicon {
-    0% {
-      transform: scale(1);
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-    }
-
-    100% {
-      transform: scale(1.02);
-      -webkit-transform: scale(1.02);
-      -moz-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-      -o-transform: scale(1.02);
-    }
-    /* Haciendo esto conseguimos que la imagen no se vuelva borrosa al momento que ocurre la animacion */
-  }
-
-  @keyframes icon {
-    0% {
-      font-size: tpx(22);
-    }
-
-    100% {
-      font-size: tpx(22);
-    }
-  }
-  /* Fin de header notificacion */
-
-  /* Contenedor de navegacion */
-  .header_cnvg {
-    display: flex;
-    width: 100%;
-    height: tpx(90);
-    padding: 0;
-    justify-content: flex-end;
-    background-color: $orange;
-    border-bottom: solid tpx(2) gray;
-    box-shadow: inset 0px 2px 10px #950404;
-
-    & > div:first-child {
-      /*  */
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: tpx(100);
-      background-color: rgb(246, 209, 0);
-      overflow: hidden;
-
-      a {
-        position: absolute;
-        background-color: rgb(59, 62, 61);
-        width: tpx(200);
-        height: tpx(110);
-        /* debo centrarlo bien con calc() */
-        left: calc(50% - 10.5%);
-        transition: all 1s ease;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        -o-transition: all 1s ease;
-      }
-    }
-  }
-
-  .header_navegacion {
-    display: flex;
-    height: 100%;
-    margin: 0;
-    padding-bottom: 0;
-    align-items: center;
-  }
-
-  .header_listas {
-    height: 100%;
-    display: inline-flex;
-    
-    a {
-      color: rgb(235, 235, 235);
-    }
-  }
-  .header_cbusqueda + ul li{
-    margin: 0;
-    height: 100%;
-    padding: 0 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .header_cbusqueda + ul li:hover{
-    background-color: $blanco2;
-    a{
-      color: $orange;
-    }
-    a:active{
-      color: $orange4;
-    }
-  }
-  /* Input busqueda */
-  .header_cbusqueda {
-    margin: 0 1rem  0 0;
-    & + ul {
-     margin: 0;
-    }
-    [type="search"] {
-      width: tpx(230);
-      height: tpx(38);
-      padding: 0 tpx(12) 0 tpx(12);
-      border: none;
-      background-color: rgb(218, 215, 214);
-      outline: solid tpx(2) $rojo;
-      color: rgb(32, 33, 33);
-      border-radius: tpx(19);
-      -webkit-border-radius: tpx(19);
-      -moz-border-radius: tpx(19);
-      -ms-border-radius: tpx(19);
-      -o-border-radius: tpx(19);
-    }
-  }
-  .header_cbusqueda + ul li:not(li:first-child) {
-    margin: 0;
-  }
-
-  /* Menu hamburguesa */
-  .header_menuHmb {
-    display: none;
-    align-self: center;
-  }
-  /* Inicio de sesion y registro de usurio */
-  .header_lgsg {
-    margin: 0 2rem 0 10rem;
-    div:first-child{
-      a:hover{
-        color: $blanco1;
-        cursor: pointer;
-        margin-bottom: .1rem;
-        border-bottom:solid .2rem $blanco2;
-      }
-      a:active{
-        color: $blanco;
-      }
-    }
-    div:last-child{
-      display: none;
-    }
-  }
-  .header_media_wrapper {
-    display: none;
-  }
-  /* Fin de contenedor de navegacion */
-
+  
   main{
     margin: 0 7rem;
+    overflow-y: scroll;
   }
   .container{
+    max-width: 60rem;
+    margin: auto;
     padding: 0 2rem;
-    background-color: $blanCont;
+    background-color: #fff;
   }
   
   /* Caroussel de la cabecera */
   .caroussel {
     width: 100%;
     height: tpx(400);
-    @include bordes(px);
     background-color: $default;
     /* Le damos un display flex temporal */
     display: block !important;
@@ -2004,7 +1975,6 @@ hr {
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 100%;
       gap: 0;
       margin-bottom: 0;
     }
@@ -2013,7 +1983,9 @@ hr {
     }
     .aside_wrapper_items {
       width: 100%;
-      height: 46.2%;
+      height: 47.5%;
+      border-radius: 0.2rem;
+      overflow: hidden;
       img {
         width: 100%;
         height: 100%;
@@ -2059,8 +2031,29 @@ hr {
         margin-top: tpx(20);
       }
 
+      & > a{
+        width: 40%;
+        position: relative;
+      }
+      & > a:hover::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: rgba(17, 1, 1, 0.148);
+        transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+      }
+      
+
       img {
-        width: 30%;
+        width: 100%;
         height: 100%;
       }
 
@@ -2073,7 +2066,7 @@ hr {
 
         h3{
           width: 100%;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 1.4rem;
           color: $negro;
         }
@@ -2086,20 +2079,7 @@ hr {
     &_info:hover figcaption{
       background-color: $orange3;
     }
-    &_info:hover::after{
-      position: absolute;
-      content: "";
-      left: 0;
-      width: 30%;
-      height: 100%;
-      z-index: 2;
-      background-color: rgba(17, 1, 1, 0.148);
-      transition: all .3s ease-in-out;
-      -webkit-transition: all .3s ease-in-out;
-      -moz-transition: all .3s ease-in-out;
-      -ms-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-    }
+   
 
     &_aside {
       margin-top: tpx(75);
@@ -2440,11 +2420,14 @@ hr {
   .valoradas {
     margin-bottom: tpx(60);
     &_titulo {
-      @include radiusTitle();
       @include encabezados();
       margin-bottom: tpx(30);
     }
 
+    &_titulo + span{
+      margin-top: 1.3rem;
+    }
+    
     &_container {
       width: 100%;
       display: grid;
@@ -2636,6 +2619,7 @@ hr {
   }
   /* Fin footer */
 }
+/* LANDSCAPE */
 @media screen and (orientation: landscape){
   .stikybutton{
     width: tpx(23);

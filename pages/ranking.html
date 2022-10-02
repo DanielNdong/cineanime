@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Cineanime  by Daniel Aquilino | Sitio web para noticias sobre cine y anime</title>
+    <link rel="stylesheet" href="/css/ranking.css">
+    <link rel="stylesheet" href="/css/hamburgers.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <header class="header" id="up">
+        <!-- Contenedor del logo -->
+        <div class="header_logo">
+          <a href="../index.html">
+            <!-- Logo -->
+            <img src="../assets/logo/cineanimelogo.png" width="33" alt="cineanime">
+          </a>
+        </div>
+      <!-- Barra de notificaciones -->
+      <article class="header_notificacion">
+        <!-- Texto de aviso... -->
+        <div class="header_aviso">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            officiis reiciendis aliquid debitis accusamus, alias quis unde id porro. 
+          </p>
+        </div>
+        <!-- Enlaces a redes sociales -->
+        <div class="header_rs">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <input type="checkbox" name="" id="hamburguesa">   
+      <!-- Contenedor de navegacion -->
+      <section class="header_cnvg" id="naviWrapper">
+        <!-- Menu navegación -->
+        <nav class="header_navegacion" >
+            <!-- Contenedor del form de 'busqueda' -->
+            <div class="header_cbusqueda">
+              <form>
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="search"
+                />
+              </form>
+            </div>
+          <ul class="header_listas">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="rodajes.html">RODAJES</a></li>
+            <li><a href="ranking.html">RANKING</a></li>
+            <li><a href="contacto.html">CONTÁCTO</a></li>
+            
+          </ul>
+          <!-- Inicio de sesón y Registro de usuario -->
+          <section class="header_lgsg">
+           
+            <div>
+              <a class="logins" href="pages/login.html">Login</a>
+              <a class="logins" href="pages/signout.html"
+                >Registrate!</a>
+            </div>
+          </section>
+          <!-- Logo y enlaces a redes sociales -->
+        <section class="header_media_wrapper"> 
+          <!-- Contenedor de redes sociales -->
+              <h3>Follow us</h3>
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-telegram" ></i>
+                  </a>
+                </li>
+              </ul>
+      </section>
+        </nav>
+      </section>
+      <!-- Menu hamburguesa -->
+      
+      <div class="header_menuHmb">
+        <button class="hamburger hamburger--collapse-r ham-active" type="button" id="hamActive">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <label class="hamburger_label" for="hamburguesa"></label>
+        </button>
+      </div>
+    </header>
+    <main>
+        <!-- Boton flotante -->
+      <a href="#up">
+        <img src="../assets/icons/arrow-down-angle-svgrepo-com.svg" class="stikybutton" alt="subir"></img>
+      </a>
+      <!-- Estrenos de terror -->
+      <section>
+          <p><a href="/index.html">Home</a> - Ranking</p>
+        
+        <article class="ranking">
+            <label for="prev">Prev</label>
+            <label for="nextt">Next</label>
+            <h2>Accion y Aventura</h2>
+            <section class="ranking_inner">
+                <input type="radio" name="advance" id="prev">
+                <input type="radio" name="advance" id="nextt">
+                <div class="ranking_wrapper">
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/series/strangersthings.webp" title="Stranger Things" alt="Stranger Things" />
+                        <figcaption>
+                            <h3>Stranger Things</h3>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/animes/Cyberpunk-4K-Wallpapers.jpg" title="Ciberpunk" alt="Ciberpunk" />
+                        <figcaption>
+                            <h3>Ciberpunk: Redrunner</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/zombie3.webp" title="Zombie 3" alt="Zombi 3" />
+                        <figcaption>
+                            <h3>Zombie 3</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/supermascotas.webp" title="Supermascotas" alt="Supermascotas" />
+                        <figcaption>
+                            <h3>Supermascotas</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/thorlovethunder.jpg" title="Thor: Love and thunder" alt="Thor 4" />
+                        <figcaption>
+                            <h3>Thor Love and Thunder</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/peliculas/suicidesquad2.jpg" title="The Suicide Squad 2" alt="Suicide Squad 2" />
+                        <figcaption>
+                            <h3>The Suicide Squad</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
+        <!-- Accion y aventura -->
+        <article class="ranking">
+            <label for="prev1">Prev</label>
+            <label for="nextt1">Next</label>
+            <h2>Terror</h2>
+            <section class="ranking_inner">
+                <input type="radio" name="advance1" id="prev1">
+                <input type="radio" name="advance1" id="nextt1">
+                <div class="ranking_wrapper">
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/series/strangersthings.webp" title="Stranger Things" alt="Stranger Things" />
+                        <figcaption>
+                            <h3>Stranger Things</h3>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/animes/Cyberpunk-4K-Wallpapers.jpg" title="Ciberpunk" alt="Ciberpunk" />
+                        <figcaption>
+                            <h3>Ciberpunk: Redrunner</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/zombie3.webp" title="Zombie 3" alt="Zombi 3" />
+                        <figcaption>
+                            <h3>Zombie 3</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/supermascotas.webp" title="Supermascotas" alt="Supermascotas" />
+                        <figcaption>
+                            <h3>Supermascotas</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/thorlovethunder.jpg" title="Thor: Love and thunder" alt="Thor 4" />
+                        <figcaption>
+                            <h3>Thor Love and Thunder</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/peliculas/suicidesquad2.jpg" title="The Suicide Squad 2" alt="Suicide Squad 2" />
+                        <figcaption>
+                            <h3>The Suicide Squad</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="ranking_wrapper">
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/series/strangersthings.webp" title="Stranger Things" alt="Stranger Things" />
+                        <figcaption>
+                            <h3>Stranger Things</h3>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/animes/Cyberpunk-4K-Wallpapers.jpg" title="Ciberpunk" alt="Ciberpunk" />
+                        <figcaption>
+                            <h3>Ciberpunk: Redrunner</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/zombie3.webp" title="Zombie 3" alt="Zombi 3" />
+                        <figcaption>
+                            <h3>Zombie 3</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/supermascotas.webp" title="Supermascotas" alt="Supermascotas" />
+                        <figcaption>
+                            <h3>Supermascotas</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/thorlovethunder.jpg" title="Thor: Love and thunder" alt="Thor 4" />
+                        <figcaption>
+                            <h3>Thor Love and Thunder</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/peliculas/suicidesquad2.jpg" title="The Suicide Squad 2" alt="Suicide Squad 2" />
+                        <figcaption>
+                            <h3>The Suicide Squad</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
+        <!-- Amor y drama -->
+        <article class="ranking">
+            <label for="prev2">Prev</label>
+            <label for="nextt2">Next</label>
+            <h2>Ciencia Ficción</h2>
+            <section class="ranking_inner">
+                <input type="radio" name="advance2" id="prev2">
+                <input type="radio" name="advance2" id="nextt2">
+                <div class="ranking_wrapper">
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/series/strangersthings.webp" title="Stranger Things" alt="Stranger Things" />
+                        <figcaption>
+                            <h3>Stranger Things</h3>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/animes/Cyberpunk-4K-Wallpapers.jpg" title="Ciberpunk" alt="Ciberpunk" />
+                        <figcaption>
+                            <h3>Ciberpunk: Redrunner</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/zombie3.webp" title="Zombie 3" alt="Zombi 3" />
+                        <figcaption>
+                            <h3>Zombie 3</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/supermascotas.webp" title="Supermascotas" alt="Supermascotas" />
+                        <figcaption>
+                            <h3>Supermascotas</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/thorlovethunder.jpg" title="Thor: Love and thunder" alt="Thor 4" />
+                        <figcaption>
+                            <h3>Thor Love and Thunder</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/peliculas/suicidesquad2.jpg" title="The Suicide Squad 2" alt="Suicide Squad 2" />
+                        <figcaption>
+                            <h3>The Suicide Squad</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
+        <!-- Fantasia y misterio -->
+        <article class="ranking">
+            <label for="prev3">Prev</label>
+            <label for="nextt3">Next</label>
+            <h2>Amor y Drama</h2>
+            <section class="ranking_inner">
+                <input type="radio" name="advance3" id="prev3">
+                <input type="radio" name="advance3" id="nextt3">
+                <div class="ranking_wrapper">
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/series/strangersthings.webp" title="Stranger Things" alt="Stranger Things" />
+                        <figcaption>
+                            <h3>Stranger Things</h3>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/animes/Cyberpunk-4K-Wallpapers.jpg" title="Ciberpunk" alt="Ciberpunk" />
+                        <figcaption>
+                            <h3>Ciberpunk: Redrunner</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/zombie3.webp" title="Zombie 3" alt="Zombi 3" />
+                        <figcaption>
+                            <h3>Zombie 3</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/supermascotas.webp" title="Supermascotas" alt="Supermascotas" />
+                        <figcaption>
+                            <h3>Supermascotas</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+        
+                        <img src="../assets/images/peliculas/thorlovethunder.jpg" title="Thor: Love and thunder" alt="Thor 4" />
+                        <figcaption>
+                            <h3>Thor Love and Thunder</h3>
+                        </figcaption>
+                    </figure>
+                    
+                        <figure class="ranking_wrapper_items">
+                        <img src="../assets/images/peliculas/suicidesquad2.jpg" title="The Suicide Squad 2" alt="Suicide Squad 2" />
+                        <figcaption>
+                            <h3>The Suicide Squad</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
+        <hr>
+        <!-- Comentarios -->
+        <section class="comentarios">
+          <header>
+              <h2 data-numcomen="23">Comentarios</h2>
+              <div>
+                  <!-- Logo user -->
+                  <img src="" alt="">
+                  <p>Usuario777</p>
+              </div>
+          </header>
+          <form>
+              <textarea placeholder="Deja tu comentario..."></textarea>
+              <input type="submit" value="Comentar">
+              <input type="reset" value="Cancelar">
+          </form>
+          
+        </section>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+            <!-- footer main content -->
+            <section class="footer_container">
+              <!-- Contenedor del logo del sitio web -->
+              <div class="logo">
+                <a href="../index.html">
+                  <img src="../assets/logo/cineanimelogo.png" width="33" alt="cineanime">
+                </a>
+              </div>
+              <!-- Logo y enlaces a redes sociales -->
+              <section class="media_wrapper media"> 
+                  <!-- Contenedor de redes sociales -->
+                      <h3>Follow us</h3>
+                      <ul>
+                        <li>
+                          <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <i class="fa-brands fa-telegram" ></i>
+                          </a>
+                        </li>
+                      </ul>
+              </section>
+              <!-- Contenido de la pagina -->
+              <section class="footer_categoria_wrapper sections">
+                
+                <article>
+                    <h3>NOTICIAS</h3>
+                    <ul>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                  </ul>
+                  </article>
+                  <article>
+                    <h3>ESTRENOS</h3>
+                    <ul>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                  </ul>
+                  </article>
+                  <article>
+                    <h3>RATING</h3>
+                    <ul>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                      <li><a href="">listaPelicula</a></li>
+                  </ul>
+                  </article>
+                <article>
+                  <h3>FOROS</h3>
+                  <ul>
+                    <li><a href="">listaPelicula</a></li>
+                    <li><a href="">listaPelicula</a></li>
+                    <li><a href="">listaPelicula</a></li>
+                    <li><a href="">listaPelicula</a></li>
+                    <li><a href="">listaPelicula</a></li>
+                    <li><a href="">listaPelicula</a></li>
+                </ul>
+                </article>
+              </section>
+            </section>
+            <!-- Copyright -->
+            <section>
+              <div>
+                <p>CineAnime © 2022-2023</p>
+            </div>
+                <div>
+                    <a href="">Some text for policy</a>
+                </div>
+            </section>
+    </footer>
+    <!-- End footer -->
+    
+        <!-- Animaciones para el abrir y cerrar el menu de navegacion en dispositivos maviles y tablets -->
+    <script src="../js/animations.js"></script>
+        <script>
+          /*
+          * Este es un pequeño script para animar al manu hamburguesa.
+          * Debo dejar en claro que el script procede de la misma libreria no ha sido creado por mi.
+          */
+        var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+      
+        var hamburgers = document.querySelectorAll(".hamburger");
+        if (hamburgers.length > 0) {
+          forEach(hamburgers, function(hamburger) {
+            hamburger.addEventListener("click", function() {
+              this.classList.toggle("is-active");
+            }, false);
+          });
+        }
+        </script>
+</body>
+</html>
